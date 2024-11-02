@@ -86,6 +86,8 @@ Initialize the multiplayer peer as a client with the given ``peer_id`` (must be 
 
 You can optionally specify a ``channels_config`` array of :ref:`TransferMode<enum_MultiplayerPeer_TransferMode>` which will be used to create extra channels (WebRTC only supports one transfer mode per channel).
 
+Note that when the multiplayer peer is initialized as a client and then disconnected from the server, it will revert to server mode. After a disconnect, calls to :ref:`MultiplayerAPI.is_server<class_MultiplayerAPI_method_is_server>` will return ``true``.
+
 .. rst-class:: classref-item-separator
 
 ----
